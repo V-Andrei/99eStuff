@@ -681,7 +681,7 @@
 .body__overlay {
   backface-visibility: hidden;
   background-color: rgba(0, 0, 0, 0.8);
-  cursor: url("../../images/icons/close-20.png") 25 25, pointer;
+  cursor: url("../../img/icons/close-20.png") 25 25, pointer;
   height: 100%;
   left: 0;
   opacity: 0;

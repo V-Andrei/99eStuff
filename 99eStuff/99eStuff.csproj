@@ -123,6 +123,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -135,9 +136,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\custom.css" />
-    <Content Include="Content\css\plugins.css" />
     <Content Include="Content\css\plugins\ajax-loader.gif" />
     <Content Include="Content\css\plugins\AjaxLoader.gif" />
     <Content Include="Content\css\plugins\fonts\slick.svg" />
@@ -151,11 +150,36 @@
     <Content Include="Content\css\shortcode\default.css" />
     <Content Include="Content\css\shortcode\footer.css" />
     <Content Include="Content\css\shortcode\header.css" />
+    <Content Include="Content\css\plugins.css" />
     <Content Include="Content\css\shortcode\shortcodes.css" />
     <Content Include="Content\css\shortcode\slider.css" />
     <Content Include="Content\css\style-customizer.css" />
     <Content Include="Content\fonts\Material-Design-Iconic-Font.svg" />
     <Content Include="Content\fonts\themify.svg" />
+    <Content Include="Content\img\cart\1.jpg" />
+    <Content Include="Content\img\icons\ajax-loader.gif" />
+    <Content Include="Content\img\icons\close-20.png" />
+    <Content Include="Content\img\icons\close.png" />
+    <Content Include="Content\img\icons\loading.gif" />
+    <Content Include="Content\img\icons\map.png" />
+    <Content Include="Content\img\icons\next.png" />
+    <Content Include="Content\img\icons\prev.png" />
+    <Content Include="Content\img\icons\select-option-white.png" />
+    <Content Include="Content\img\icons\select-option.png" />
+    <Content Include="Content\img\icons\send-2.png" />
+    <Content Include="Content\img\icons\send.png" />
+    <Content Include="Content\img\logo\99estuff-botlogo.png" />
+    <Content Include="Content\img\logo\99estuff-icon.png" />
+    <Content Include="Content\img\logo\99estuff-jlogo.png" />
+    <Content Include="Content\img\logo\99estuff-large.png" />
+    <Content Include="Content\img\logo\99estuff-white.png" />
+    <Content Include="Content\img\logo\99estuff.png" />
+    <Content Include="Content\img\logo\flavicon.png" />
+    <Content Include="Content\img\product\1.png" />
+    <Content Include="Content\img\quickview\1.jpg" />
+    <Content Include="Content\img\slider\1.png" />
+    <Content Include="Content\img\slider\2.png" />
+    <Content Include="Content\img\slider\bg.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\main.js" />
     <Content Include="Content\js\plugins.js" />
@@ -308,7 +332,6 @@
     <Content Include="Views\Home\Shop.cshtml" />
     <Content Include="Views\Pages\ProductDetails.cshtml" />
     <Content Include="Views\Pages\Cart.cshtml" />
-    <Content Include="Views\Pages\Wishlist.cshtml" />
     <Content Include="Views\Pages\Checkout.cshtml" />
     <Content Include="Views\Pages\LoginRegister.cshtml" />
   </ItemGroup>

@@ -1,11 +1,4 @@
-/*-----------------------------------------------------------------------------------
-  Template Name: Uniqlo-Minimalist eCommerce HTML5 Template.
-  Template URI: #
-  Description: Uniqlo is a unique website template designed in HTML with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design corporate, corporate any other purposes websites.
-  Author: HasTech
-  Author URI: https://themeforest.net/user/hastech/portfolio
-  Version: 1.1
-
+/*----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------
   
@@ -1490,7 +1483,7 @@ product__style--7
 }
 
 .htc__newsletter__area .subscribe__btn input.bst__btn {
-    background-image: url("images/icons/send-2.png");
+    background-image: url("img/icons/send-2.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 29% auto;
@@ -3393,7 +3386,7 @@ blockquote::before {
     -moz-appearance: none;
     -ms-appearance: none;
     -o-appearance: none;
-    background: rgba(0, 0, 0, 0) url("images/icons/select-option.png") no-repeat scroll 83% 8px / 14px 9px;
+    background: rgba(0, 0, 0, 0) url("img/icons/select-option.png") no-repeat scroll 83% 8px / 14px 9px;
     padding-right: 50px;
 }
 
@@ -3847,7 +3840,7 @@ a.shipping-calculator-button:hover{
     -moz-appearance: none;
     -webkit-appearance: none;
     -o-appearance: none;
-    background: rgba(0, 0, 0, 0) url("images/icons/select-option.png") no-repeat scroll 96% 14px / 11px 9px;
+    background: rgba(0, 0, 0, 0) url("img/icons/select-option.png") no-repeat scroll 96% 14px / 11px 9px;
     border: 1px solid #c1c1c1;
     height: 40px;
     line-height: 40px;
