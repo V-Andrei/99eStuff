@@ -12,18 +12,13 @@
 <body>
 
         <!-- Start Bradcaump area -->
-        <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/2.jpg) no-repeat scroll center center / cover ;">
+        <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(../../Content/img/shop/shopBg.png) no-repeat scroll center center;">
             <div class="ht__bradcaump__wrap">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="bradcaump__inner text-center">
                                 <h2 class="bradcaump-title">Shop Page</h2>
-                                <nav class="bradcaump-inner">
-                                    <a class="breadcrumb-item" href="index.html">Home</a>
-                                    <span class="brd-separetor">/</span>
-                                    <span class="breadcrumb-item active">Shop Page</span>
-                                </nav>
                             </div>
                         </div>
                     </div>
@@ -41,7 +36,7 @@
                             <div class="filter__menu__container">
                                 <div class="product__menu">
                                     <button data-filter="*" class="is-checked">All</button>
-                                    <button data-filter=".cat--1">Furnitures</button>
+                                    <button data-filter=".cat--1">Gifts</button>
                                     <button data-filter=".cat--2">Bags</button>
                                     <button data-filter=".cat--3">Decoration</button>
                                     <button data-filter=".cat--4">Accessories</button>
@@ -130,22 +125,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/1.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href="@Url.Action("Cart","Pages")"><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Simple Black Clock</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Simple Black Clock</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -159,22 +151,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/2.png" alt="product images">
+                                        <a href="@Url.Action("ProductDetails","Pages")">
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">BO&Play Wireless Speaker</a></h2>
+                                    <h2><a href="@Url.Action("ProductDetails","Pages")">BO&Play Wireless Speaker</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -188,18 +177,15 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/3.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
-                                            <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href=@Url.Action("ProductDetails","Pages")><span class="ti-plus"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
@@ -217,22 +203,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/4.png" alt="product images">
+                                        <a href="@Url.Action("ProductDetails","Pages")">
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href="@Url.Action("Cart","Pages")"><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Brone Lamp Glasses</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Brone Lamp Glasses</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -246,22 +229,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/5.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Clothes Boxed</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Clothes Boxed</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -275,22 +255,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/6.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Liquid Unero Ginger Lily</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Liquid Unero Ginger Lily</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -304,22 +281,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/7.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Miliraty Backpack</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Miliraty Backpack</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -333,22 +307,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/8.png" alt="product images">
+                                        <a href="@Url.Action("ProductDetails","Pages")">
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Saved Wines Corkscrew</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Saved Wines Corkscrew</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -362,22 +333,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/9.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Simple Fabric Bags</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Simple Fabric Bags</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -391,22 +359,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/10.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Simple Fabric Chair</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Simple Fabric Chair</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -420,22 +385,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/11.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Unero Round Sunglass</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Unero Round Sunglass</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -449,22 +411,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/12.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Unero Small Bag</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Unero Small Bag</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -478,22 +437,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/13.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Wood Complex Lamp Box</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Wood Complex Lamp Box</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -507,22 +463,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/14.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Wood Long TV Board</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Wood Long TV Board</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -536,22 +489,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/15.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Wood Simple Chair V2</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Wood Simple Chair V2</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -565,22 +515,19 @@
                             <div class="product foo">
                                 <div class="product__inner">
                                     <div class="pro__thumb">
-                                        <a href="#">
-                                            <img src="images/product/16.png" alt="product images">
+                                        <a href=@Url.Action("ProductDetails","Pages")>
+                                            <img src="~/Content/img/product/1.png" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
-                                    </div>
-                                    <div class="add__to__wishlist">
-                                        <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="product-details.html">Wood Simple Clock</a></h2>
+                                    <h2><a href=@Url.Action("ProductDetails","Pages")>Wood Simple Clock</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$16.00</li>
                                         <li class="new__price">$10.00</li>
@@ -619,7 +566,7 @@
                             <!-- Start product images -->
                             <div class="product-images">
                                 <div class="main-image images">
-                                    <img alt="big images" src="images/product/big-img/1.jpg">
+                                    <img alt="big images" src="~/Content/img/quickview/1.jpg">
                                 </div>
                             </div>
                             <!-- end product images -->
