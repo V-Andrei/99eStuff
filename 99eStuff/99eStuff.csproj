@@ -172,6 +172,14 @@
     <Content Include="Content\img\aboutUs\testimonial.png" />
     <Content Include="Content\img\aboutUs\video.png" />
     <Content Include="Content\img\cart\1.jpg" />
+    <Content Include="Content\img\cart\3.png" />
+    <Content Include="Content\img\cart\4.png" />
+    <Content Include="Content\img\cart\cart.png" />
+    <Content Include="Content\img\checkout\1.jpg" />
+    <Content Include="Content\img\checkout\2.jpg" />
+    <Content Include="Content\img\checkout\3.jpg" />
+    <Content Include="Content\img\checkout\checkoutBg.png" />
+    <Content Include="Content\img\contact\contactBg.png" />
     <Content Include="Content\img\icons\ajax-loader.gif" />
     <Content Include="Content\img\icons\close-20.png" />
     <Content Include="Content\img\icons\close.png" />
@@ -183,6 +191,7 @@
     <Content Include="Content\img\icons\select-option.png" />
     <Content Include="Content\img\icons\send-2.png" />
     <Content Include="Content\img\icons\send.png" />
+    <Content Include="Content\img\login\loginBg.jpg" />
     <Content Include="Content\img\logo\99estuff-botlogo.png" />
     <Content Include="Content\img\logo\99estuff-icon.png" />
     <Content Include="Content\img\logo\99estuff-jlogo.png" />
@@ -191,6 +200,14 @@
     <Content Include="Content\img\logo\99estuff.png" />
     <Content Include="Content\img\logo\flavicon.png" />
     <Content Include="Content\img\product\1.png" />
+    <Content Include="Content\img\product\big-img\1.jpg" />
+    <Content Include="Content\img\product\big-img\2.jpg" />
+    <Content Include="Content\img\product\big-img\3.jpg" />
+    <Content Include="Content\img\product\big-img\4.jpg" />
+    <Content Include="Content\img\product\small-img\1.jpg" />
+    <Content Include="Content\img\product\small-img\2.jpg" />
+    <Content Include="Content\img\product\small-img\3.jpg" />
+    <Content Include="Content\img\product\small-img\4.jpg" />
     <Content Include="Content\img\quickview\1.jpg" />
     <Content Include="Content\img\shop\shopBg.png" />
     <Content Include="Content\img\slider\1.png" />
