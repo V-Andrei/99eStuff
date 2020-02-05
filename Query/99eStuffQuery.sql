@@ -491,7 +491,7 @@ insert into dbo.Products
 	11,
 	11,
 	'Travel Bag',
-	'Tote Bag',
+	'Bags',
 	65.12,
 	68.33,
 	(SELECT * FROM OPENROWSET(BULK N'D:\Wantsome\TheProject\99eStuff\ProductImg\SmallImages\11.jpg', SINGLE_BLOB) as Img11)

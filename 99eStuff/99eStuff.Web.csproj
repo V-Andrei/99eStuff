@@ -135,6 +135,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DetailedProductListViewModel.cs" />
+    <Compile Include="Models\DetailedProductAndProdcutsViewModel.cs" />
+    <Compile Include="Models\ProductsListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -379,7 +382,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -391,6 +393,16 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\99eStuff.BusinessLogic\99eStuff.BusinessLogic.csproj">
+      <Project>{cce10d28-ec02-4f3a-b54b-fbed94ee9c76}</Project>
+      <Name>99eStuff.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\99eStuff.Data\99eStuff.Data.csproj">
+      <Project>{87406f65-f134-4748-9c73-485cdad201db}</Project>
+      <Name>99eStuff.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
