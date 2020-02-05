@@ -8,8 +8,10 @@ namespace _99eStuff.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
+
             return View();
         }
 
