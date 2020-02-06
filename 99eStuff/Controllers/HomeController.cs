@@ -16,23 +16,19 @@ namespace _99eStuff.Controllers
     public class HomeController : Controller
     {
         private readonly IProductsRepository productsRepository;
-        private readonly IDetailedProductsRepository detailedProductsRepository;
 
         public HomeController()
         {
             productsRepository = new ProductRepository(ConnectionManager.GetConnection());
-            detailedProductsRepository = new DetailedProductRepository(ConnectionManager.GetConnection());
         }
 
         [HttpGet]
         public ActionResult Index()
         {
-            List<ProductsListViewModel> productsList = ProductList();
-
-            return View(productsList);
+            return ProductAndDetailed();
         }
 
-        private List<ProductsListViewModel> ProductList()
+        private ActionResult ProductAndDetailed()
         {
             List<Products> allProducts = this.productsRepository.GetAll();
 
@@ -43,16 +39,23 @@ namespace _99eStuff.Controllers
                 productsList.Add(new ProductsListViewModel
                 {
                     ID = product.ID,
-                    IDDetailed = product.IDDetailed,
                     NameProduct = product.NameProduct,
                     Category = product.Category,
+                    Stock = product.Stock,
                     CurrentPrice = product.CurrentPrice,
                     OldPrice = product.OldPrice,
-                    SmallPicture = product.SmallPicture
+                    SmallPicture = product.SmallPicture,
+                    BigPicture = product.BigPicture,
+                    Description = product.Description,
+                    Detail1 = product.Detail1,
+                    Detail2 = product.Detail2,
+                    Detail3 = product.Detail3,
+                    Detail4 = product.Detail4,
+
                 });
             }
 
-            return productsList;
+            return View(allProducts);
         }
 
         public ActionResult About()
@@ -67,9 +70,7 @@ namespace _99eStuff.Controllers
 
         public ActionResult Shop()
         {
-            List<ProductsListViewModel> productsList = ProductList();
-
-            return View(productsList);
+            return ProductAndDetailed();
         }
     }
 }

@@ -135,8 +135,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DetailedProductListViewModel.cs" />
-    <Compile Include="Models\DetailedProductAndProdcutsViewModel.cs" />
     <Compile Include="Models\ProductsListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -375,7 +373,6 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Shop.cshtml" />
-    <Content Include="Views\Pages\ProductDetails.cshtml" />
     <Content Include="Views\Pages\Cart.cshtml" />
     <Content Include="Views\Pages\Checkout.cshtml" />
     <Content Include="Views\Pages\LoginRegister.cshtml" />

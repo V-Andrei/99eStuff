@@ -3,7 +3,7 @@
     ViewBag.Title = "Shop";
 }
 
-@model List<_99eStuff.Models.ProductsListViewModel>
+@model _99eStuff.Models.DetailedProductAndProdcutsViewModel
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -70,15 +70,6 @@
                                         </ul>
                                     </div>
                                     <div class="single__filter">
-                                        <h2>Size</h2>
-                                        <ul class="filter__list">
-                                            <li><a href="#xxl">XXL</a></li>
-                                            <li><a href="#xl">XL</a></li>
-                                            <li><a href="#x">X</a></li>
-                                            <li><a href="#l">L</a></li>
-                                            <li><a href="#m">M</a></li>
-                                            <li><a href="#s">S</a></li>
-                                        </ul>
                                     </div>
                                     <div class="single__filter">
                                         <h2>Tags</h2>
@@ -122,7 +113,7 @@
                 <!-- End Product MEnu -->
                 <div class="row product__list">
                     <!-- Start Single Product -->
-                    @foreach (var products in Model)
+                    @foreach (var products in Model.Products)
                     {
                         <div class="col-md-4 single__pro col-lg-3 cat--@products.Category col-sm-12">
                             <div class="product foo">
@@ -138,13 +129,13 @@
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
-                                            <li><a title="View More" href="@Url.Action("ProductDetails","Pages")"><span class="ti-plus"></span></a></li>
+                                            <li><a title="View More" href="@Url.Action("ProductDetails","Pages", new { id = products.ID}, null)"><span class="ti-plus"></span></a></li>
                                             <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="product__details">
-                                    <h2><a href="@Url.Action("ProductDetails","Pages")">@products.NameProduct</a></h2>
+                                    <h2><a href="@Url.Action("ProductDetails","Pages",new { id = products.ID}, null)">@products.NameProduct</a></h2>
                                     <ul class="product__price">
                                         <li class="old__price">$@products.OldPrice</li>
                                         <li class="new__price">$@products.CurrentPrice</li>
