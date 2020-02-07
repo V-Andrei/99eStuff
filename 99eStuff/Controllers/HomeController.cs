@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -15,47 +16,43 @@ namespace _99eStuff.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IProductsRepository productsRepository;
-
-        public HomeController()
-        {
-            productsRepository = new ProductRepository(ConnectionManager.GetConnection());
-        }
-
-        [HttpGet]
-        public ActionResult Index()
-        {
-            return ProductAndDetailed();
-        }
+        ProductRepository productsRepository = new ProductRepository();
+        DataTable dt;
 
         private ActionResult ProductAndDetailed()
         {
-            List<Products> allProducts = this.productsRepository.GetAll();
+            string mycmd = "select * from Products";
+            dt = new DataTable();
 
-            List<ProductsListViewModel> productsList = new List<ProductsListViewModel>();
+            dt = productsRepository.GetAll(mycmd);
 
-            foreach (var product in allProducts)
+
+            List<ProductsListViewModel> list = new List<ProductsListViewModel>();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
-                productsList.Add(new ProductsListViewModel
+                ProductsListViewModel prod = new ProductsListViewModel
                 {
-                    ID = product.ID,
-                    NameProduct = product.NameProduct,
-                    Category = product.Category,
-                    Stock = product.Stock,
-                    CurrentPrice = product.CurrentPrice,
-                    OldPrice = product.OldPrice,
-                    SmallPicture = product.SmallPicture,
-                    BigPicture = product.BigPicture,
-                    Description = product.Description,
-                    Detail1 = product.Detail1,
-                    Detail2 = product.Detail2,
-                    Detail3 = product.Detail3,
-                    Detail4 = product.Detail4,
+                    ID = Convert.ToInt32(dt.Rows[i]["ID"]),
+                    NameProduct = dt.Rows[i]["NameProduct"].ToString(),
+                    Category = dt.Rows[i]["Category"].ToString(),
+                    Stock = Convert.ToInt32(dt.Rows[i]["Stock"]),
+                    OldPrice = Convert.ToDecimal(dt.Rows[i]["OldPrice"]),
+                    CurrentPrice = Convert.ToDecimal(dt.Rows[i]["CurentPrice"]),
+                    Description = dt.Rows[i]["Description"].ToString(),
+                    Detail1 = dt.Rows[i]["Detail1"].ToString(),
+                    Detail2 = dt.Rows[i]["Detail2"].ToString(),
+                    Detail3 = dt.Rows[i]["Detail3"].ToString(),
+                    Detail4 = dt.Rows[i]["Detail4"].ToString(),
+                    SmallPicture = (byte[])(dt.Rows[i]["SmallPicture"]),
+                    BigPicture = (byte[])(dt.Rows[i]["BigPicture"])
+                };
 
-                });
+                list.Add(prod);
             }
 
-            return View(productsList);
+
+            return View(list);
         }
 
         public ActionResult About()
@@ -69,6 +66,11 @@ namespace _99eStuff.Controllers
         }
 
         public ActionResult Shop()
+        {
+            return ProductAndDetailed();
+        }
+
+        public ActionResult Index()
         {
             return ProductAndDetailed();
         }

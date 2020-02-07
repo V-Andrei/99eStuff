@@ -1,78 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _99eStuff.BusinessLogic;
+using System.Configuration;
 
 namespace _99eStuff.Data
 {
-    public class ProductRepository : IProductsRepository
+    public class ProductRepository
     {
-        private readonly SqlConnection connection;
-
-        public ProductRepository(SqlConnection connection)
+       SqlCommand cmd;
+        SqlDataAdapter da;
+        DataSet ds;
+      
+        public static SqlConnection connect()
         {
-            this.connection = connection;
-        }     
-
-        public List<Products> GetAll()
-        {
-            List<Products> list = GetProducts();
-            return list;
-        }
-
-        private List<Products> GetProducts()
-        {
-            var list = new List<Products>();
-
-            var query = "select * from Products";
-            var command = new SqlCommand
+             string connection = ConfigurationManager.ConnectionStrings["ProductsModel"].ConnectionString;
+             SqlConnection con = new SqlConnection(connection);
+            if(con.State==ConnectionState.Open)
             {
-                CommandText = query,
-                Connection = this.connection
-            };
+                con.Close();
 
-            using (var reader = command.ExecuteReader())
+            }
+            else
             {
-                while (reader.Read())
-                {
-                    var iD = (int)reader["ID"];
-                    var nameProduct = reader["NameProduct"] as string;
-                    var category = reader["Category"] as string;
-                    var stock = (int)reader["Stock"];
-                    var currentPrice = (decimal)reader["CurentPrice"];
-                    var oldPrice = (decimal)reader["OldPrice"];
-                    var smallPicture = (byte[])reader["SmallPicture"];
-                    var bigPicture = (byte[])reader["BigPicture"];
-                    var description = reader["Description"] as string;
-                    var detail1 = reader["Detail1"] as string;
-                    var detail2 = reader["Detail2"] as string;
-                    var detail3 = reader["Detail3"] as string;
-                    var detail4 = reader["Detail4"] as string;
-
-                    list.Add(new Products
-                    {
-                        ID = iD,
-                        NameProduct = nameProduct,
-                        Category = category,
-                        Stock = stock,
-                        CurrentPrice = currentPrice,
-                        OldPrice = oldPrice,
-                        SmallPicture = smallPicture,
-                        BigPicture = bigPicture,
-                        Description = description,
-                        Detail1 = detail1,
-                        Detail2 = detail2,
-                        Detail3 = detail3,
-                        Detail4 = detail4                       
-                    });
-
-                }
+                con.Open();
             }
 
-            return list;
+
+            return con;
+
+        }
+
+        public bool DMLOpperation(string query)
+        {
+            cmd = new SqlCommand(query, ProductRepository.connect());
+            int x= cmd.ExecuteNonQuery();
+            if(x==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
+
+        public DataTable GetAll(string query)
+        {
+            da = new SqlDataAdapter(query, ProductRepository.connect());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
     }
 }

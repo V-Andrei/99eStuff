@@ -1,9 +1,8 @@
 ﻿@{
     ViewBag.Title = "Index";
-
 }
 
-@model List<_99eStuff.Models.ProductsListViewModel>
+@model IEnumerable<_99eStuff.Models.ProductsListViewModel>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -144,15 +143,15 @@
                                         <a href="@Url.Action("ProductDetails","Pages")">
                                             @{
                                                 var base64 = Convert.ToBase64String(product.SmallPicture);
-                                                var imgsrc = string.Format("data:image/gif;base64,{0}", base64);
-                                            }
+                                                var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                                            }                                            
                                             <img src="@imgsrc" alt="product images">
                                         </a>
                                     </div>
                                     <div class="product__hover__info">
                                         <ul class="product__action">
                                             <li><a data-toggle="modal" data-target="#productModal_@product.ID" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href=@Url.Action("Cart","Pages")><span class="ti-shopping-cart"></span></a></li>
+                                            <li><a title="Add TO Cart" href=@Url.Action("Add", "AddToCart",product)><span class="ti-shopping-cart"></span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -190,9 +189,9 @@
                                 <div class="product-images">
                                     <div class="main-image images">
                                         @{
-                                            var base64v2 = Convert.ToBase64String(product.BigPicture);
-                                            var imgsrc2 = string.Format("data:image/gif;base64,{0}", base64v2);
-                                        }
+                                            var base64 = Convert.ToBase64String(product.BigPicture);
+                                            var imgsrc2 = string.Format("data:image/jpg;base64,{0}", base64);
+                                        }                                       
                                         <img alt="big images" src="@imgsrc2">
                                     </div>
                                 </div>

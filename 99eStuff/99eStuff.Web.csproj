@@ -130,6 +130,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AddToCartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -373,7 +374,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Shop.cshtml" />
-    <Content Include="Views\Pages\Cart.cshtml" />
+    <Content Include="Views\AddToCart\Cart.cshtml" />
     <Content Include="Views\Pages\Checkout.cshtml" />
     <Content Include="Views\Pages\LoginRegister.cshtml" />
   </ItemGroup>

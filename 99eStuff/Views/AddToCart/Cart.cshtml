@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Cart";
 }
+@model IEnumerable<_99eStuff.Models.ProductsListViewModel>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -44,24 +45,20 @@
                                             <th class="product-remove">Remove</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="~/Content/img/cart/3.png" alt="product img" /></a></td>
-                                            <td class="product-name"><a href="#">Vestibulum suscipit</a></td>
-                                            <td class="product-price"><span class="amount">£165.00</span></td>
-                                            <td class="product-quantity"><input type="number" value="1" /></td>
-                                            <td class="product-subtotal">£165.00</td>
-                                            <td class="product-remove"><a href="#">X</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src="~/Content/img/cart/4.png" alt="product img" /></a></td>
-                                            <td class="product-name"><a href="#">Vestibulum dictum magna</a></td>
-                                            <td class="product-price"><span class="amount">£50.00</span></td>
-                                            <td class="product-quantity"><input type="number" value="1" /></td>
-                                            <td class="product-subtotal">£50.00</td>
-                                            <td class="product-remove"><a href="#">X</a></td>
-                                        </tr>
-                                    </tbody>
+                                    @foreach (var product in Model)
+                                    {
+                                        <tbody>
+                                            <tr>                                         
+                                                <td class="product-thumbnail"><a href="#"><img src="img" alt="product img" /></a></td>
+                                                <td class="product-name"><a href="#">@product.NameProduct</a></td>
+                                                <td class="product-price"><span class="amount">@product.CurrentPrice</span></td>
+                                                <td class="product-quantity"><input type="number" value="1" /></td>
+                                                <td class="product-subtotal">@product.OldPrice</td>
+                                                <td class="product-remove"><a href="'@Url.Action("Remove","AddToCart",product)'">X</a></td>
+                                            </tr>
+                                        </tbody>
+                                    }
+
                                 </table>
                             </div>
                             <div class="row">
