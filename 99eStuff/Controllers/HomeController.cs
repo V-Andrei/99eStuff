@@ -55,7 +55,7 @@ namespace _99eStuff.Controllers
                 });
             }
 
-            return View(allProducts);
+            return View(productsList);
         }
 
         public ActionResult About()
