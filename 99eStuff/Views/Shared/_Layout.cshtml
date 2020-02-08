@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -79,7 +81,18 @@
                             <ul class="menu-extra">
                                 <li class="search search__open d-none d-sm-block"><span class="ti-search"></span></li>
                                 <li><a href=@Url.Action("LoginRegister","Pages")><span class="ti-user"></span></a></li>
-                                <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
+                                @{
+                                    if (Session["count"] == null)
+                                    {
+                                        <li><a href=@Url.Action("EmptyCart","AddToCart")><span class="ti-shopping-cart"></span></a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a href=@Url.Action("Cart","AddToCart")><span class="ti-shopping-cart"></span>@Session["count"]</a></li>
+                                    }
+
+                                }
+
                             </ul>
                         </div>
                     </div>
@@ -110,56 +123,7 @@
                     </div>
                 </div>
             </div>
-            <!-- End Search Popap -->
-            <!-- Start Cart Panel -->
-            <div class="shopping__cart">
-                <div class="shopping__cart__inner">
-                    <div class="offsetmenu__close__btn">
-                        <a href="#"><i class="zmdi zmdi-close"></i></a>
-                    </div>
-                    <div class="shp__cart__wrap">
-                        <div class="shp__single__product">
-                            <div class="shp__pro__thumb">
-                                <a href="#">
-                                    <img src="~/Content/img/cart/1.jpg" alt="product images">
-                                </a>
-                            </div>
-                            <div class="shp__pro__details">
-                                <h2><a href="product-details.html">BO&Play Wireless Speaker</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$105.00</span>
-                            </div>
-                            <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
-                            </div>
-                        </div>
-                        <div class="shp__single__product">
-                            <div class="shp__pro__thumb">
-                                <a href="#">
-                                    <img src="~/Content/img/cart/1.jpg" alt="product images">
-                                </a>
-                            </div>
-                            <div class="shp__pro__details">
-                                <h2><a href="product-details.html">Brone Candle</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$25.00</span>
-                            </div>
-                            <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="shoping__total">
-                        <li class="subtotal">Subtotal:</li>
-                        <li class="total__price">$130.00</li>
-                    </ul>
-                    <ul class="shopping__btn">
-                        <li><a href=@Url.Action("Cart","Pages")>View Cart</a></li>
-                        <li class="shp__checkout"><a href=@Url.Action("Checkout","Pages")>Checkout</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- End Cart Panel -->
+            <!-- End Search Popap -->       
         </div>
         <!-- Start Footer Area -->
         @RenderBody()
@@ -253,14 +217,14 @@
         <!-- End Footer Area -->
         <!-- End Offset Wrapper -->
     </div>
-        <!-- jquery latest version -->
-        <script src="~/Content/js/vendor/jquery-1.12.4.min.js"></script>
-        <!-- Bootstrap Framework js -->
-        <script src="~/Content/js/popper.min.js"></script>
-        <script src="~/Content/js/bootstrap.min.js"></script>
-        <!-- All js plugins included in this file. -->
-        <script src="~/Content/js/plugins.js"></script>
-        <!-- Main js file that contents all jQuery plugins activation. -->
-        <script src="~/Content/js/main.js"></script>
+    <!-- jquery latest version -->
+    <script src="~/Content/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap Framework js -->
+    <script src="~/Content/js/popper.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="~/Content/js/plugins.js"></script>
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="~/Content/js/main.js"></script>
 </body>
 </html>

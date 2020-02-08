@@ -12,14 +12,14 @@ namespace _99eStuff.Data
 {
     public class ProductRepository
     {
-       SqlCommand cmd;
+        SqlCommand cmd;
         SqlDataAdapter da;
         DataSet ds;
       
         public static SqlConnection connect()
         {
-             string connection = ConfigurationManager.ConnectionStrings["ProductsModel"].ConnectionString;
-             SqlConnection con = new SqlConnection(connection);
+            string connection = ConfigurationManager.ConnectionStrings["ProductsModel"].ConnectionString;
+            SqlConnection con = new SqlConnection(connection);
             if(con.State==ConnectionState.Open)
             {
                 con.Close();

@@ -1,5 +1,4 @@
-﻿using _99eStuff.BusinessLogic;
-using _99eStuff.Data;
+﻿using _99eStuff.Data;
 using _99eStuff.Models;
 using System;
 using System.Collections.Generic;
@@ -16,32 +15,28 @@ namespace _99eStuff.Controllers
         DataTable dt;
         ProductRepository productRepository = new ProductRepository();
         // GET: AddToCart
-        public ActionResult Add(ProductsListViewModel prod)
+        public ActionResult Add(ProductsCartViewModel prod)
         {
 
             if (Session["cart"] == null)
             {
-                List<ProductsListViewModel> li = new List<ProductsListViewModel>();
+                List<ProductsCartViewModel> li = new List<ProductsCartViewModel>();
 
                 li.Add(prod);
                 Session["cart"] = li;
                 ViewBag.cart = li.Count();
-
-
                 Session["count"] = 1;
-
-
             }
             else
             {
-                List<ProductsListViewModel> li = (List<ProductsListViewModel>)Session["cart"];
+                List<ProductsCartViewModel> li = (List<ProductsCartViewModel>)Session["cart"];
                 li.Add(prod);
                 Session["cart"] = li;
                 ViewBag.cart = li.Count();
                 Session["count"] = Convert.ToInt32(Session["count"]) + 1;
 
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Cart", "AddToCart");
 
 
         }
@@ -49,13 +44,17 @@ namespace _99eStuff.Controllers
         public ActionResult Cart()
         {
 
-            return View((List<ProductsListViewModel>)Session["cart"]);
+            return View((List<ProductsCartViewModel>)Session["cart"]);
 
         }
-
-        public ActionResult Remove(ProductsListViewModel prod)
+        public ActionResult EmptyCart()
         {
-            List<ProductsListViewModel> li = (List<ProductsListViewModel>)Session["cart"];
+            return View();
+        }
+
+        public ActionResult Remove(ProductsCartViewModel prod)
+        {
+            List<ProductsCartViewModel> li = (List<ProductsCartViewModel>)Session["cart"];
             li.RemoveAll(x => x.ID == prod.ID);
             Session["cart"] = li;
             Session["count"] = Convert.ToInt32(Session["count"]) - 1;
