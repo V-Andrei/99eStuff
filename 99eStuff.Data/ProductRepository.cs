@@ -35,7 +35,7 @@ namespace _99eStuff.Data
 
         }
 
-        public bool DMLOpperation(string query)
+        public bool Opperation(string query)
         {
             cmd = new SqlCommand(query, ProductRepository.connect());
             int x= cmd.ExecuteNonQuery();

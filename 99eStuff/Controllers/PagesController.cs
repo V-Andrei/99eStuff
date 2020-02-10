@@ -11,16 +11,7 @@ namespace _99eStuff.Controllers
 {
     public class PagesController : Controller
     {
-
-        public ActionResult Checkout()
-        {
-            return View();
-        }
         public ActionResult LoginRegister()
-        {
-            return View();
-        }
-        public ActionResult ProductDetails()
         {
             return View();
         }

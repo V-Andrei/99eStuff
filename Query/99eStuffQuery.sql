@@ -15,8 +15,16 @@ CREATE TABLE Products
 	Detail2 varchar(200),
 	Detail3 varchar(200),
 	Detail4 varchar(200)
-)
+);
 
+CREATE TABLE ContactData
+(
+	IdClient int not null primary key IDENTITY(1,1),
+	NameClient varchar(100) not null,
+	Mail varchar(100) not null,
+	City varchar(100) not null,
+	[Message] text
+)
 
 insert into dbo.Products
 	([ID],[NameProduct],[Category],[Stock],[CurentPrice],[OldPrice],[SmallPicture],[BigPicture],[Detail1],[Detail2],[Detail3],[Detail4],[Description])
