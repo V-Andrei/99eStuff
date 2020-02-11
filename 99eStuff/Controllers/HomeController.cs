@@ -18,43 +18,7 @@ namespace _99eStuff.Controllers
     {
         ProductRepository productsRepository = new ProductRepository();
         DataTable dt;
-
-        private ActionResult ProductAndDetailed()
-        {
-            string mycmd = "select * from Products";
-            dt = new DataTable();
-
-            dt = productsRepository.GetAll(mycmd);
-
-
-            List<ProductsListViewModel> list = new List<ProductsListViewModel>();
-
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                ProductsListViewModel prod = new ProductsListViewModel
-                {
-                    ID = Convert.ToInt32(dt.Rows[i]["ID"]),
-                    NameProduct = dt.Rows[i]["NameProduct"].ToString(),
-                    Category = dt.Rows[i]["Category"].ToString(),
-                    Stock = Convert.ToInt32(dt.Rows[i]["Stock"]),
-                    OldPrice = Convert.ToDecimal(dt.Rows[i]["OldPrice"]),
-                    CurrentPrice = Convert.ToDecimal(dt.Rows[i]["CurentPrice"]),
-                    Description = dt.Rows[i]["Description"].ToString(),
-                    Detail1 = dt.Rows[i]["Detail1"].ToString(),
-                    Detail2 = dt.Rows[i]["Detail2"].ToString(),
-                    Detail3 = dt.Rows[i]["Detail3"].ToString(),
-                    Detail4 = dt.Rows[i]["Detail4"].ToString(),
-                    SmallPicture = (byte[])(dt.Rows[i]["SmallPicture"]),
-                    BigPicture = (byte[])(dt.Rows[i]["BigPicture"])
-                };
-
-                list.Add(prod);
-            }
-
-
-            return View(list);
-        }
-
+     
         public ActionResult About()
         {
             return View();
@@ -74,5 +38,41 @@ namespace _99eStuff.Controllers
         {
             return ProductAndDetailed();
         }
+        private ActionResult ProductAndDetailed()
+        {
+            string mycmd = "select * from Products";
+            dt = new DataTable();
+
+            dt = productsRepository.GetAll(mycmd);
+
+
+            List<ProductsListViewModel> list = new List<ProductsListViewModel>();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ProductsListViewModel prod = new ProductsListViewModel
+                {
+                    ID = Convert.ToInt32(dt.Rows[i]["ID"]),
+                    NameProduct = dt.Rows[i]["NameProduct"].ToString(),
+                    Category = dt.Rows[i]["Category"].ToString(),
+                    Stock = Convert.ToInt32(dt.Rows[i]["Stock"]),
+                    OldPrice = Convert.ToDouble(dt.Rows[i]["OldPrice"]),
+                    CurrentPrice = Convert.ToDouble(dt.Rows[i]["CurentPrice"]),
+                    Description = dt.Rows[i]["Description"].ToString(),
+                    Detail1 = dt.Rows[i]["Detail1"].ToString(),
+                    Detail2 = dt.Rows[i]["Detail2"].ToString(),
+                    Detail3 = dt.Rows[i]["Detail3"].ToString(),
+                    Detail4 = dt.Rows[i]["Detail4"].ToString(),
+                    SmallPicture = (byte[])(dt.Rows[i]["SmallPicture"]),
+                    BigPicture = (byte[])(dt.Rows[i]["BigPicture"])
+                };
+
+                list.Add(prod);
+            }
+
+
+            return View(list);
+        }
+
     }
 }

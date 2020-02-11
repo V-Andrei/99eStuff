@@ -77,22 +77,22 @@
                             {
                                 <div class="single-contact-form">
                                     <div class="contact-box name">
-                                        @Html.TextBoxFor(m => m.NameClient)
-                                        @Html.TextBoxFor(m => m.Mail)
+                                        @Html.TextBoxFor(m => m.NameClient, new { placeholder = "Full Name", required = "required", @class = "form-input" })
+                                        @Html.TextBoxFor(m => m.Mail, new { placeholder = "Mail", required = "required", @class = "form-input" })
                                     </div>
                                 </div>
                                 <div class="single-contact-form">
                                     <div class="contact-box subject">
-                                        @Html.TextBoxFor(m => m.City)
+                                        @Html.TextBoxFor(m => m.City, new { placeholder = "City", required = "required", @class = "form-input" })
                                     </div>
                                 </div>
                                 <div class="single-contact-form">
                                     <div class="contact-box message">
-                                        @Html.TextBoxFor(m => m.Message)
+                                        @Html.TextBoxFor(m => m.Message, new { placeholder = "Message", required = "required", @class = "form-input" })
                                     </div>
                                 </div>
                                 <div class="contact-btn">
-                                    <button type="submit" class="fv-btn" value="Submit" href="@Url.Action("ContactSent","Contact")">SEND</button>
+                                    <button type="submit" class="fv-btn" value="Submit">SEND</button>
                                 </div>
                             }
                         </div>
@@ -123,7 +123,7 @@
                 scrollwheel: false,
 
                 // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(23.7286, 90.3854), // New York
+                center: new google.maps.LatLng(47.1724, 27.5634), 
 
                 // How you would like to style the map.
                 // This is where you would paste any style found on Snazzy Maps.
@@ -367,7 +367,7 @@
 
             // Let's also add a marker while we're at it
             var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(23.7286, 90.3854),
+                position: new google.maps.LatLng(47.1724, 27.5634),
                 map: map,
                 title: 'Tasfiu!',
                 icon: 'images/icons/map.png',

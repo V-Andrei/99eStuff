@@ -5,7 +5,7 @@
 @model IEnumerable<_99eStuff.Models.ProductsCartViewModel>
 
 @{
-    int sum = 0;
+    double sum = 0;
 }
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -64,7 +64,7 @@
                             </table>
                             @foreach (var x in Model)
                             {
-                                sum = Convert.ToInt32(x.CurrentPrice) + sum;
+                                sum = Convert.ToDouble(x.CurrentPrice) + sum;
 
                             }
                         </div>

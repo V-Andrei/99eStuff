@@ -14,7 +14,6 @@ namespace _99eStuff.Data
     {
         SqlCommand cmd;
         SqlDataAdapter da;
-        DataSet ds;
       
         public static SqlConnection connect()
         {
@@ -23,16 +22,12 @@ namespace _99eStuff.Data
             if(con.State==ConnectionState.Open)
             {
                 con.Close();
-
             }
             else
             {
                 con.Open();
             }
-
-
             return con;
-
         }
 
         public bool Opperation(string query)
@@ -47,8 +42,6 @@ namespace _99eStuff.Data
             {
                 return false;
             }
-
-
         }
 
         public DataTable GetAll(string query)

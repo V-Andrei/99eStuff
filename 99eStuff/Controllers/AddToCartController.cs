@@ -14,7 +14,7 @@ namespace _99eStuff.Controllers
 
         DataTable dt;
         ProductRepository productRepository = new ProductRepository();
-        // GET: AddToCart
+   
         public ActionResult Add(ProductsCartViewModel prod)
         {
 
@@ -59,7 +59,6 @@ namespace _99eStuff.Controllers
             Session["cart"] = li;
             Session["count"] = Convert.ToInt32(Session["count"]) - 1;
             return RedirectToAction("Cart", "AddToCart");
-            //return View();
         }
     }
 }

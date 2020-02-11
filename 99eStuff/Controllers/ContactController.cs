@@ -43,7 +43,7 @@ namespace _99eStuff.Controllers
                 }
             }
 
-            return View(customer);
+            return RedirectToAction("ContactSent", "Contact"); ;
         }
     }
 }

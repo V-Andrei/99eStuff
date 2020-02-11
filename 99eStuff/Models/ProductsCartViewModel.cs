@@ -9,9 +9,9 @@ namespace _99eStuff.Models
 
         public int Stock { get; set; }
 
-        public decimal CurrentPrice { get; set; }
+        public double CurrentPrice { get; set; }
 
-        public decimal OldPrice { get; set; }
+        public double OldPrice { get; set; }
 
     }
 }
