@@ -26,6 +26,12 @@ CREATE TABLE ContactData
 	[Message] text
 )
 
+CREATE TABLE MailNewsletter
+(
+	IdMail int not null primary key IDENTITY(1,1),
+	Mail varchar(100) not null,
+)
+
 insert into dbo.Products
 	([ID],[NameProduct],[Category],[Stock],[CurentPrice],[OldPrice],[SmallPicture],[BigPicture],[Detail1],[Detail2],[Detail3],[Detail4],[Description])
 	values
