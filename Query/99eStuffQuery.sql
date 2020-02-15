@@ -26,6 +26,21 @@ CREATE TABLE ContactData
 	[Message] text
 )
 
+CREATE TABLE UserData
+(
+	IdUser int not null primary key IDENTITY(1,1),
+	UserName varchar(100) not null,
+	Passsword varchar(100) not null,
+)
+
+insert into dbo.UserData
+([UserName],[Passsword])
+values
+(
+'Test',
+'test'
+)
+
 insert into dbo.Products
 	([ID],[NameProduct],[Category],[Stock],[CurentPrice],[OldPrice],[SmallPicture],[BigPicture],[Detail1],[Detail2],[Detail3],[Detail4],[Description])
 	values
