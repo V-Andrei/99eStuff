@@ -77,7 +77,6 @@
                         <!-- End MAinmenu Ares -->
                         <div class="col-md-2 col-lg-2 col-6">
                             <ul class="menu-extra">
-                                <li class="search search__open d-none d-sm-block"><span class="ti-search"></span></li>
                                 <li><a href=@Url.Action("LoginRegister","Pages")><span class="ti-user"></span></a></li>
                                 @{
                                     if (Session["count"] == null)
@@ -102,26 +101,7 @@
         <!-- End Header Style -->
         <div class="body__overlay"></div>
         <!-- Start Offset Wrapper -->
-        <div class="offset__wrapper">
-            <!-- Start Search Popap -->
-            <div class="search__area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="search__inner">
-                                <form action="#" method="get">
-                                    <input placeholder="Search here... " type="text">
-                                    <button type="submit"></button>
-                                </form>
-                                <div class="search__close__btn">
-                                    <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Search Popap -->       
+        <div class="offset__wrapper">            
         </div>
         <!-- Start Footer Area -->
         @RenderBody()
@@ -136,29 +116,17 @@
                                     <img src="~/Content/img/logo/99estuff-botlogo.png" alt="footer logo">
                                 </a>
                             </div>
-                            <div class="footer__details">
-                                <p>Get 10% discount with notified about the latest news and updates.</p>
-                            </div>
                         </div>
                     </div>
                     <!-- End Single Footer Widget -->
                     <!-- Start Single Footer Widget -->
-                    <div class="col-md-6 col-lg-3 col-sm-6 smb-30 xmt-30">
+                    <div class="col-md-6 col-lg-3 col-sm-6">
                         <div class="ft__widget">
-                            <h2 class="ft__title">Newsletter</h2>
+                            <h2 class="ft__title">Contact info</h2>
                             <div class="newsletter__form">
                                 <div class="input__box">
                                     <div id="mc_embed_signup">
-                                        <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
-                                            <div id="mc_embed_signup_scroll" class="htc__news__inner">
-                                                <div class="news__input">
-                                                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
-                                                </div>
-                                                <div class="clearfix subscribe__btn">
-                                                    <input type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe" class="bst__btn btn--white__color">
-                                                </div>
-                                            </div>
-                                        </form>
+                                        <p> +00 111 222 333 44 <br><a href="#">info@99eStuff.com</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -166,23 +134,23 @@
                     </div>
                     <!-- End Single Footer Widget -->
                     <!-- Start Single Footer Widget -->
-                    <div class="col-md-6 col-lg-3 col-sm-6 smt-30 xmt-30">
+                    <div class="col-md-6 col-lg-3 col-sm-6">
                         <div class="ft__widget contact__us">
-                            <h2 class="ft__title">Contact Us</h2>
+                            <h2 class="ft__title">Find Us</h2>
                             <div class="footer__inner">
-                                <p> 21, Pacurari, <br> Iasi, Romania, <br><a href="#">info@99eStuff.com</a></p>
+                                <p> 21, Pacurari, <br> Iasi, Romania, <br></p>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Footer Widget -->
                     <!-- Start Single Footer Widget -->
-                    <div class="col-md-6 col-lg-2 lg-offset-1 col-sm-6 smt-30 xmt-30">
+                    <div class="col-md-6 col-lg-3 col-sm-6">
                         <div class="ft__widget">
                             <h2 class="ft__title">Follow Us</h2>
                             <ul class="social__icon">
-                                <li><a href="#" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/99eStuff" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/99estuff/" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/99estuff/" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
                             </ul>
                         </div>
                     </div>

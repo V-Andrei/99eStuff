@@ -36,7 +36,7 @@ namespace _99eStuff.Controllers
                 Session["count"] = Convert.ToInt32(Session["count"]) + 1;
 
             }
-            return RedirectToAction("Cart", "AddToCart");
+            return RedirectToAction("Shop", "Home");
 
 
         }
