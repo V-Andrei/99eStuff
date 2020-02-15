@@ -134,14 +134,14 @@
     <Compile Include="Controllers\AddToCartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PagesController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\MailNewsletterViewModel.cs" />
     <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\ProductsCartViewModel.cs" />
     <Compile Include="Models\ProductsListViewModel.cs" />
+    <Compile Include="Models\UsersLoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -379,9 +379,10 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Shop.cshtml" />
     <Content Include="Views\AddToCart\Cart.cshtml" />
-    <Content Include="Views\Pages\LoginRegister.cshtml" />
+    <Content Include="Views\Login\LoginRegister.cshtml" />
     <Content Include="Views\AddToCart\EmptyCart.cshtml" />
     <Content Include="Views\Contact\ContactSent.cshtml" />
+    <Content Include="Views\Login\LoginActive.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
