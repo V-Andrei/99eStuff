@@ -17,6 +17,7 @@
                     <div class="col-md-6 ml-auto mr-auto">
                         <ul class="login__register__menu nav justify-contend-center" role="tablist">
                             <li role="presentation" class="login active"><a class="active" href="#login" role="tab" data-toggle="tab">Login</a></li>
+                            <li role="presentation" class="register"><a href="#register" role="tab" data-toggle="tab">Register</a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,9 +65,46 @@
                                             </td>
                                         </tr>
                                     </table>
-                                }                               
+                                }
                             </div>
-                            <!-- End Single Content -->                     
+                            <!-- End Single Content -->
+                            <!-- Start Single Content -->
+                            <div id="register" role="tabpanel" class="single__tabs__panel tab-pane">
+                                @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+                                { 
+                                    <table>
+                                    <tr>
+                                        <td>
+                                            @Html.TextBoxFor(m => m.NameClient, new { placeholder = "Full Name", required = "required", @class = "form-input" })
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Html.TextBoxFor(m => m.UserName, new { placeholder = "UserName", required = "required", @class = "form-input" })
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Html.TextBoxFor(m => m.Password, new { type = "password", placeholder = "Password", required = "required", @class = "form-input" })
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Html.TextBoxFor(m => m.Mail, new { type = "email", placeholder = "Mail", required = "required", @class = "form-input" })
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="contact-btn">
+                                                <button class="fv-btn" type="submit" name="name">Registre</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </table>
+                                }
+                            </div>
+                            <!-- End Single Content -->
                         </div>
                     </div>
                 </div>

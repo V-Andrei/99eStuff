@@ -78,7 +78,7 @@
                                 <div class="single-contact-form">
                                     <div class="contact-box name">
                                         @Html.TextBoxFor(m => m.NameClient, new { placeholder = "Full Name", required = "required", @class = "form-input" })
-                                        @Html.TextBoxFor(m => m.Mail, new { placeholder = "Mail", required = "required", @class = "form-input" })
+                                        @Html.TextBoxFor(m => m.Mail, new {  type = "email", placeholder = "Mail", required = "required", @class = "form-input" })
                                     </div>
                                 </div>
                                 <div class="single-contact-form">

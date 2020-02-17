@@ -53,14 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProductRepository.cs" />
+    <Compile Include="ConnectionData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\99eStuff.BusinessLogic\99eStuff.BusinessLogic.csproj">
-      <Project>{cce10d28-ec02-4f3a-b54b-fbed94ee9c76}</Project>
-      <Name>99eStuff.BusinessLogic</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

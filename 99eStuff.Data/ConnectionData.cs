@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _99eStuff.BusinessLogic;
 using System.Configuration;
 
 namespace _99eStuff.Data
 {
-    public class ProductRepository
+    public class ConnectionData
     {
         SqlCommand cmd;
         SqlDataAdapter da;
@@ -32,7 +26,7 @@ namespace _99eStuff.Data
 
         public bool Opperation(string query)
         {
-            cmd = new SqlCommand(query, ProductRepository.connect());
+            cmd = new SqlCommand(query, ConnectionData.connect());
             int x= cmd.ExecuteNonQuery();
             if(x==1)
             {
@@ -46,7 +40,7 @@ namespace _99eStuff.Data
 
         public DataTable GetAll(string query)
         {
-            da = new SqlDataAdapter(query, ProductRepository.connect());
+            da = new SqlDataAdapter(query, ConnectionData.connect());
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;

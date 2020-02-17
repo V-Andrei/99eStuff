@@ -1,14 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using _99eStuff.BusinessLogic;
 using _99eStuff.Data;
 using _99eStuff.Models;
 
@@ -16,7 +9,7 @@ namespace _99eStuff.Controllers
 {
     public class HomeController : Controller
     {
-        ProductRepository productsRepository = new ProductRepository();
+        ConnectionData productsRepository = new ConnectionData();
         DataTable dt;
      
         public ActionResult About()
