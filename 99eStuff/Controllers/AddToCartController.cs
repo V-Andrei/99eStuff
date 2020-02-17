@@ -13,7 +13,7 @@ namespace _99eStuff.Controllers
     {
 
         DataTable dt;
-        ConnectionData productRepository = new ConnectionData();
+        ConnectionData connectionData = new ConnectionData();
    
         public ActionResult Add(ProductsCartViewModel prod)
         {

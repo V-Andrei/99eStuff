@@ -72,36 +72,39 @@
                             <div id="register" role="tabpanel" class="single__tabs__panel tab-pane">
                                 @using (Html.BeginForm("Register", "Login", FormMethod.Post))
                                 { 
-                                    <table>
-                                    <tr>
-                                        <td>
-                                            @Html.TextBoxFor(m => m.NameClient, new { placeholder = "Full Name", required = "required", @class = "form-input" })
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            @Html.TextBoxFor(m => m.UserName, new { placeholder = "UserName", required = "required", @class = "form-input" })
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            @Html.TextBoxFor(m => m.Password, new { type = "password", placeholder = "Password", required = "required", @class = "form-input" })
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            @Html.TextBoxFor(m => m.Mail, new { type = "email", placeholder = "Mail", required = "required", @class = "form-input" })
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>
-                                            <div class="contact-btn">
-                                                <button class="fv-btn" type="submit" name="name">Registre</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    </table>
+                                    <div>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    @Html.TextBoxFor(m => m.NameClient, new { placeholder = "Full Name", required = "required", @class = "form-input" })
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @Html.TextBoxFor(m => m.UserName, new { placeholder = "UserName", required = "required", @class = "form-input" })
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @Html.TextBoxFor(m => m.Password, new { type = "password", placeholder = "Password", required = "required", @class = "form-input" })
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    @Html.TextBoxFor(m => m.Mail, new { type = "email", placeholder = "Mail", required = "required", @class = "form-input" })
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <div class="contact-btn">
+                                                        <button class="fv-btn" type="submit" name="name">Registre</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    
                                 }
                             </div>
                             <!-- End Single Content -->

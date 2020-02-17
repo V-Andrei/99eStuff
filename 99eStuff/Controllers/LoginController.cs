@@ -14,7 +14,7 @@ namespace _99eStuff.Controllers
     public class LoginController : Controller
     {
 
-        ConnectionData productsRepository = new ConnectionData();
+        ConnectionData connectionData = new ConnectionData();
         DataTable dt;
 
         // GET: /Login/
@@ -33,7 +33,7 @@ namespace _99eStuff.Controllers
             string mycmd = "select * from UserData";
             dt = new DataTable();
 
-            dt = productsRepository.GetAll(mycmd);
+            dt = connectionData.GetAll(mycmd);
 
 
             List<UsersLoginViewModel> list = new List<UsersLoginViewModel>();

@@ -9,7 +9,7 @@ namespace _99eStuff.Controllers
 {
     public class HomeController : Controller
     {
-        ConnectionData productsRepository = new ConnectionData();
+        ConnectionData connectionData = new ConnectionData();
         DataTable dt;
      
         public ActionResult About()
@@ -36,7 +36,7 @@ namespace _99eStuff.Controllers
             string mycmd = "select * from Products";
             dt = new DataTable();
 
-            dt = productsRepository.GetAll(mycmd);
+            dt = connectionData.GetAll(mycmd);
 
 
             List<ProductsListViewModel> list = new List<ProductsListViewModel>();
