@@ -29,84 +29,56 @@
                             <div id="login" role="tabpanel" class="single__tabs__panel tab-pane active">
                                 @using (Html.BeginForm("Autherize", "Login", FormMethod.Post))
                                 {
-                                    <table>
-                                        <tr>
-                                            <td>
-                                                @Html.LabelFor(model => model.UserName)
-                                            </td>
-                                            <td>
-                                                @Html.EditorFor(model => model.UserName)
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>@Html.ValidationMessageFor(model => model.UserName)</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>@Html.LabelFor(model => model.Password)</td>
-                                            <td>@Html.EditorFor(model => model.Password)</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>@Html.ValidationMessageFor(model => model.Password)</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <label class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage)</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>
-                                                <div class="contact-btn">
-                                                    <button class="fv-btn" type="submit" name="name">Login</button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                }
+                                <div class="single-contact-form">
+                                    <div class="contact-box">
+                                        @Html.TextBoxFor(model => model.UserName, new { placeholder = "UserName", required = "required", @class = "form-input"} )
+                                    </div>
+                                    <div>
+                                        @Html.ValidationMessageFor(model => model.UserName)
+                                    </div>
+                                    <div class="contact-box">
+                                        @Html.TextBoxFor(model => model.Password, new { type = "password", placeholder = "Password", required = "required", @class = "form-input"})
+                                    </div>
+                                    <div>
+                                        @Html.ValidationMessageFor(model => model.Password)
+                                    </div>
+                                    <div>
+                                        @Html.DisplayFor(model => model.LoginErrorMessage)
+                                    </div>
+                                    <div class="pl-4">
+                                        <div class="contact-btn mt--30 pl-5">
+                                            <button type="submit" class="fv-btn">Login</button>
+                                        </div>
+                                    </div>                                        
+                                </div>                                  
+                                 }
                             </div>
                             <!-- End Single Content -->
                             <!-- Start Single Content -->
                             <div id="register" role="tabpanel" class="single__tabs__panel tab-pane">
                                 @using (Html.BeginForm("Register", "Login", FormMethod.Post))
                                 { 
-                                    <div>
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    @Html.TextBoxFor(m => m.NameClient, new { placeholder = "Full Name", required = "required", @class = "form-input" })
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    @Html.TextBoxFor(m => m.UserName, new { placeholder = "UserName", required = "required", @class = "form-input" })
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    @Html.TextBoxFor(m => m.Password, new { type = "password", placeholder = "Password", required = "required", @class = "form-input" })
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    @Html.TextBoxFor(m => m.Mail, new { type = "email", placeholder = "Mail", required = "required", @class = "form-input" })
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>
-                                                    <div class="contact-btn">
-                                                        <button class="fv-btn" type="submit" name="name">Registre</button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                    <div class="single-contact-form">
+                                        <div class="contact-box">
+                                            @Html.TextBoxFor(m => m.NameClient, new { placeholder = "Full Name", required = "required", @class = "form-input" })
+                                        </div>
+                                        <div class="contact-box">
+                                            @Html.TextBoxFor(m => m.UserName, new { placeholder = "UserName", required = "required", @class = "form-input" })
+                                        </div>
+                                        <div class="contact-box">
+                                            @Html.TextBoxFor(m => m.Password, new { type = "password", placeholder = "Password", required = "required", @class = "form-input" })
+                                        </div>
+                                        <div class="contact-box">
+                                            @Html.TextBoxFor(m => m.Mail, new { type = "email", placeholder = "Mail", required = "required", @class = "form-input" })
+                                        </div>
+                                        <div class="pl-4">
+                                            <div class="contact-btn mt--30 pl-5">
+                                                <button class="fv-btn" type="submit" name="name">Registre</button>
+                                            </div>
+                                        </div>                                                                                 
                                     </div>
-                                    
                                 }
-                            </div>
+                                </div>
                             <!-- End Single Content -->
                         </div>
                     </div>

@@ -2168,6 +2168,7 @@ select.select-color {
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
     border-color: currentcolor currentcolor #c1c1c1;
+    background: transparent none repeat scroll 0 0;
     -o-border-image: none;
     border-image: none;
     border-style: none none solid;
@@ -2225,11 +2226,13 @@ select.select-color {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
+
 .contact-btn .fv-btn:hover {
     border: 1px solid #ff4136;
     color: #fff;
     background: #ff4136;
 }
+
 .contact-form-wrap > form {
     margin-top: -9px;
 }
