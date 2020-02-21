@@ -1,12 +1,7 @@
-﻿using _99eStuff.Data;
-using _99eStuff.Models;
+﻿using _99eStuff.Models;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace _99eStuff.Controllers

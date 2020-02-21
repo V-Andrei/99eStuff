@@ -1,5 +1,4 @@
-﻿
-namespace _99eStuff.Models
+﻿namespace _99eStuff.Models
 {
     public class ProductsCartViewModel
     {
