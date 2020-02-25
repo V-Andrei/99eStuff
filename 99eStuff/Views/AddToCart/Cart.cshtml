@@ -72,10 +72,26 @@
                             </div>
                             <div class="col-md-4 col-sm-12 ">
                                 <div class="cart_totals">
-                                    <h2>Cart Totals: $@sum</h2>                                 
-                                    <div class="wc-proceed-to-checkout">
-                                        <a href="#")>Proceed to Checkout</a>
-                                    </div>
+                                    <h2>Cart Totals: $@sum</h2>
+                                    @if (Convert.ToInt32(Session["count"]) <= 0)
+                                    {                                     
+                                    }
+                                    else
+                                    {
+                                        if (Session["userID"] == null)
+                                        {
+                                            <div class="wc-proceed-to-checkout">
+                                                <a href="@Url.Action("LoginRegister","Login")">Proceed to Checkout</a>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="wc-proceed-to-checkout">
+                                                <a href="@Url.Action("CheckoutEnd","AddToCart")">Proceed to Checkout</a>
+                                            </div>
+                                        }
+                                    }
+
                                 </div>
                             </div>
                         </div>

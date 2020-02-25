@@ -2,7 +2,6 @@
 using _99eStuff.Models;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -10,8 +9,6 @@ namespace _99eStuff.Controllers
 {
     public class AddToCartController : Controller
     {
-
-        DataTable dt;
         ConnectionData connectionData = new ConnectionData();
    
         public ActionResult Add(ProductsCartViewModel prod)
@@ -59,5 +56,17 @@ namespace _99eStuff.Controllers
             Session["count"] = Convert.ToInt32(Session["count"]) - 1;
             return RedirectToAction("Cart", "AddToCart");
         }
+
+        public ActionResult Checkout()
+        {
+            return View();
+        }
+
+        public ActionResult CheckoutEnd()
+        {
+            Session.Abandon();
+            return RedirectToAction("Checkout", "AddToCart");
+        }
+
     }
 }

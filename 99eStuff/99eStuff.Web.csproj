@@ -213,7 +213,6 @@
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\main.js" />
     <Content Include="Content\js\plugins.js" />
-    <Content Include="Content\js\popper.min.js" />
     <Content Include="Content\js\vendor\jquery-1.12.4.min.js" />
     <Content Include="Content\js\vendor\modernizr-2.8.3.min.js" />
     <Content Include="Content\style.css" />
@@ -366,6 +365,7 @@
     <Content Include="Views\AddToCart\EmptyCart.cshtml" />
     <Content Include="Views\Contact\ContactSent.cshtml" />
     <Content Include="Views\Login\LoginActive.cshtml" />
+    <Content Include="Views\AddToCart\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
