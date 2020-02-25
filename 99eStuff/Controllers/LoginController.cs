@@ -7,6 +7,9 @@ using System.Web.Mvc;
 using _99eStuff.Models;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
+using System.IO;
 
 namespace _99eStuff.Controllers
 {
@@ -47,11 +50,12 @@ namespace _99eStuff.Controllers
                     Mail = dt.Rows[i]["Mail"].ToString(),
                     NameClient = dt.Rows[i]["NameClient"].ToString(),
                 };
-
+                
                 list.Add(users);
             }
 
-                var userDetails = list.Where(x => x.UserName == userModel.UserName && x.Password == userModel.Password).FirstOrDefault();
+                 
+                var userDetails = list.Where(x => x.UserName == userModel.UserName && x.Password == Encrypt(userModel.Password)).FirstOrDefault();
                 if (userDetails == null)
                 {
                     userModel.LoginErrorMessage = "Wrong username or password.";
@@ -77,10 +81,11 @@ namespace _99eStuff.Controllers
                 query += " SELECT SCOPE_IDENTITY()";
                 using (SqlCommand cmd = new SqlCommand(query))
                 {
+                    
                     cmd.Connection = con;
                     con.Open();
                     cmd.Parameters.AddWithValue("@UserName", client.UserName);
-                    cmd.Parameters.AddWithValue("@Password", client.Password);
+                    cmd.Parameters.AddWithValue("@Password", client.Password = Encrypt(client.Password));
                     cmd.Parameters.AddWithValue("@Mail", client.Mail);
                     cmd.Parameters.AddWithValue("@NameClient", client.NameClient);
                     client.UserID = Convert.ToInt32(cmd.ExecuteScalar());
@@ -91,13 +96,33 @@ namespace _99eStuff.Controllers
             return RedirectToAction("LoginRegister", "Login"); ;
         }
 
-
+        public string Encrypt(string clearText)
+        {
+            string EncrptKey = "99ESTUFFN080796";
+            byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
+            using (Aes encryptor = Aes.Create())
+            {
+                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncrptKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(clearBytes, 0, clearBytes.Length);
+                        cs.Close();
+                    }
+                    clearText = Convert.ToBase64String(ms.ToArray());
+                }
+            }
+            return clearText;
+        }
 
         public ActionResult LogOut()
         {
             int userId = (int)Session["userID"];
             Session.Abandon();
             return RedirectToAction("LoginRegister", "Login");
-        }
+        }      
     }
 }

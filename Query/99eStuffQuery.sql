@@ -29,20 +29,10 @@ CREATE TABLE ContactData
 CREATE TABLE UserData
 (
 	IdUser int not null primary key IDENTITY(1,1),
-	UserName varchar(50) not null,
-	Password varchar(50) not null,
-	Mail varchar(50) not null,
+	UserName varchar(100) not null,
+	[Password] varchar(200) not null,
+	Mail varchar(100) not null,
 	NameClient varchar(100) not null, 
-)
-
-insert into dbo.UserData
-([UserName],[Password],[Mail],[NameClient])
-values
-(
-'Andrei',
-'test',
-'andrei@gmail.com',
-'Andrei Vrancianu'
 )
 
 insert into dbo.Products
